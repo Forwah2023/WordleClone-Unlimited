@@ -9,7 +9,7 @@ qtw.QApplication.setAttribute(qtc.Qt.AA_UseHighDpiPixmaps, True) #use highdpi ic
 
 from keyboard import*
 
-SCREEN_WIDTH =300
+SCREEN_WIDTH =290
 SCREEN_HEIGHT =300
 TILE_SIZE=40
 #Tiles' colors and styles
@@ -49,17 +49,17 @@ class MainWidget(qtw.QWidget):
 				grid_layout.addWidget(Lettrlabel,row,i)
 		#create buttons and score lables
 		self.reset=qtw.QPushButton('Reset',self)
-		self.reset.setFixedSize(50,50)
+		self.reset.setFixedSize(40,50)
 		self.validate=qtw.QPushButton('Verify',self)
-		self.validate.setFixedSize(50,50)
+		self.validate.setFixedSize(40,50)
 		self.gueslength=len(self.word)
 		self.guess=qtw.QLineEdit('',self,placeholderText=str(self.gueslength)+'-word guess',maxLength=self.gueslength)
-		self.guess.setFixedSize(75,50)
+		self.guess.setFixedSize(65,50)
 		self.success=qtw.QLCDNumber(self)
 		self.success.setSegmentStyle(qtw.QLCDNumber.Flat)
-		self.success.setFixedSize(50,50)
+		self.success.setFixedSize(40,50)
 		self.keybtn=qtw.QPushButton(self,checkable=True,checked=False)
-		self.keybtn.setFixedSize(50,50)
+		self.keybtn.setFixedSize(40,50)
 		settingIcon=qtg.QIcon()
 		px=qtg.QPixmap('Icons/keyboard-full.png')
 		settingIcon.addPixmap(px)
